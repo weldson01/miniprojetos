@@ -11,9 +11,6 @@ function dividirCedulas(valor) {
   const restricaoUm = document.getElementById("um").checked
   const restricaoMoedas = document.getElementById("moedas").checked
 
-
-
-
   if (restricaoDuzentos) {
     if (valor >= 200) {
       duzentos = Math.floor(valor / 200)
@@ -65,6 +62,7 @@ function dividirCedulas(valor) {
   if (restricaoMoedas) {
     if (valor > 0) {
       moedas = valor.toFixed(2)
+      valor = 0;
     }
   }
   return [duzentos, cem, cinquenta, vinte, dez, cinco, dois, um, moedas]
@@ -75,22 +73,22 @@ function calcCedulas() {
   const cedulas = dividirCedulas(valor)
   let stringCedulas = ""
   if (cedulas[0])
-    stringCedulas += (cedulas[0] + " de 200, </br>")
+    stringCedulas += ("<img src='./img/200reais.jpg'> " + cedulas[0] + " de 200, </br>")
   if (cedulas[1])
-    stringCedulas += (cedulas[1] + " de 100, </br>")
+    stringCedulas += ("<img src='./img/100reais.jpg'> " + cedulas[1] + " de 100, </br>")
   if (cedulas[2])
-    stringCedulas += (cedulas[2] + " de 50,</br>")
+    stringCedulas += ("<img src='./img/50reais.jfif'> " + cedulas[2] + " de 50,</br>")
   if (cedulas[3])
-    stringCedulas += (cedulas[3] + " de 20, </br>")
+    stringCedulas += ("<img src='./img/20reais.jfif'> " + cedulas[3] + " de 20, </br>")
   if (cedulas[4])
-    stringCedulas += (cedulas[4] + " de 10, </br>")
+    stringCedulas += ("<img src='./img/10reais.jpg'> " + cedulas[4] + " de 10, </br>")
   if (cedulas[5])
-    stringCedulas += (cedulas[5] + " de 5, </br>")
+    stringCedulas += ("<img src='./img/5reais.jpg'> " + cedulas[5] + " de 5, </br>")
   if (cedulas[6])
-    stringCedulas += (cedulas[6] + " de 2,</br> ")
+    stringCedulas += ("<img src='./img/2reais.jpg'> " + cedulas[6] + " de 2,</br> ")
   if (cedulas[7])
-    stringCedulas += (cedulas[7] + " de 1, </br>")
+    stringCedulas += ("<img src='./img/1real.jpg'> " + cedulas[7] + " de 1, </br>")
   if (cedulas[8])
-    stringCedulas += (cedulas[8] + " de moedas.")
+    stringCedulas += ("<img src='./img/moedas.jfif'> " + cedulas[8] + " de moedas.")
   out.innerHTML = stringCedulas
 }
