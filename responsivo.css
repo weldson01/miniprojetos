@@ -1,0 +1,7 @@
+@media screen and (max-width:400) {
+  .container-div{
+    width: 400px;
+    height: 500px;
+    
+  }
+}

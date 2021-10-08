@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="index.css">
+  <title>Converso números em cédulas</title>
+</head>
+
+<body>
+  <div class="container">
+    <div class="container-div">
+      <h1>Conversor Números em Cédulas de Real</h1>
+      <label for="valorReal">Digite o valor em R$:</label>
+      <input type="number" id="valorReal">
+
+      <button id="btn-calcular" onclick="calcCedulas()">Calcular</button>
+      <div class="valoresCheck">
+        <label for="duzentos" class="chk">200
+          <input type="checkbox" id="duzentos" checked>
+        </label>
+        <label for="cem" class="chk">100
+          <input type="checkbox" id="cem" checked>
+        </label>
+        <label for="cinquenta" class="chk">50
+          <input type="checkbox" id="cinquenta" checked>
+        </label>
+        <label for="vinte" class="chk">20
+          <input type="checkbox" id="vinte" checked>
+        </label>
+        <label for="dez" class="chk">10
+          <input type="checkbox" id="dez" checked>
+        </label>
+      </div>
+      <div class="valoresCheck">
+        <label for="cinco" class="chk">5
+          <input type="checkbox" id="cinco" checked>
+        </label>
+        <label for="dois" class="chk">2
+          <input type="checkbox" id="dois" checked>
+        </label>
+        <label for="um" class="chk">1
+          <input type="checkbox" id="um" checked>
+        </label>
+        <label for="moedas" class="chk">moedas
+          <input type="checkbox" id="moedas" checked>
+        </label>
+      </div>
+      <h2 id="resposta"></h2>
+    </div>
+  </div>
+  <script src="index.js"></script>
+</body>
+
+</html>
